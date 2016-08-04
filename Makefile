@@ -1,4 +1,4 @@
-.PHONY: clean lib
+.PHONY: clean lib utop
 .SUFFIXES: .cma .cmxa .ml
 
 LIB = subtyp
