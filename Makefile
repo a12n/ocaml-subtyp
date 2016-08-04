@@ -10,6 +10,7 @@ clean:
 
 install: lib
 	ocamlfind install ${LIB}	\
+		*.mli	\
 		META	\
 		_build/${LIB}.cma	\
 		_build/${LIB}.cmi	\
