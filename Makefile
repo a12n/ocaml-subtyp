@@ -12,9 +12,11 @@ install: lib
 	ocamlfind install ${LIB}	\
 		*.mli	\
 		META	\
-		_build/${LIB}.cma	\
-		_build/${LIB}.cmi	\
-		_build/${LIB}.cmxa
+		_build/*.a	\
+		_build/*.cma	\
+		_build/*.cmi	\
+		_build/*.cmx	\
+		_build/*.cmxa
 
 uninstall:
 	ocamlfind remove ${LIB}
