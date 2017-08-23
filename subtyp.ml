@@ -22,6 +22,11 @@ module Pos_int = struct
   let of_int n = if n < one then invalid_arg "Pos_int.of_int" else n
 end
 
+module Pos_float = struct
+  type t = float
+  let of_float x = if x <= 0.0 then invalid_arg "Pos_float.of_float" else x
+end
+
 module Unit_float = struct
   type t = float
   let one = 1.0

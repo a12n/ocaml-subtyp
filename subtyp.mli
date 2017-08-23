@@ -22,6 +22,11 @@ module Pos_int : sig
   val one : t
 end
 
+module Pos_float : sig
+  type t = private float
+  val of_float : float -> t
+end
+
 module Unit_float : sig
   type t = private float
   val of_float : float -> t
