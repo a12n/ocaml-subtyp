@@ -16,6 +16,12 @@ module Non_neg_int : sig
   val zero : t
 end
 
+module Non_neg_num : sig
+  type t = private Num.num
+  val of_num : Num.num -> t
+  val zero : t
+end
+
 module Pos_int : sig
   type t = private int
   val of_int : int -> t
@@ -25,6 +31,11 @@ end
 module Pos_float : sig
   type t = private float
   val of_float : float -> t
+end
+
+module Pos_num : sig
+  type t = private Num.num
+  val of_num : Num.num -> t
 end
 
 module Unit_float : sig

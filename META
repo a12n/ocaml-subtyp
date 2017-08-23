@@ -1,4 +1,5 @@
 description = "Extra OCaml types for more strict interfaces"
-version = "0.2.0"
+version = "0.3.0"
+requires = "num"
 archive(byte) = "subtyp.cma"
 archive(native) = "subtyp.cmxa"
