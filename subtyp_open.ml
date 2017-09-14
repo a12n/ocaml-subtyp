@@ -6,6 +6,7 @@ type pos_float = Subtyp.Pos_float.t
 type pos_int = Subtyp.Pos_int.t
 type pos_num = Subtyp.Pos_num.t
 type unit_float = Subtyp.Unit_float.t
+type unit_num = Subtyp.Unit_num.t
 
 type 'a non_empty_list = 'a Subtyp.Non_empty_list.t
 
@@ -17,5 +18,6 @@ let pos_float = Subtyp.Pos_float.of_float
 let pos_int = Subtyp.Pos_int.of_int
 let pos_num = Subtyp.Pos_num.of_num
 let unit_float = Subtyp.Unit_float.of_float
+let unit_num = Subtyp.Unit_num.of_num
 
 let non_empty_list = Subtyp.Non_empty_list.of_list

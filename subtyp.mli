@@ -45,6 +45,13 @@ module Unit_float : sig
   val zero : t
 end
 
+module Unit_num : sig
+  type t = private Num.num
+  val of_num : Num.num -> t
+  val one : t
+  val zero : t
+end
+
 
 module Non_empty_list : sig
   type 'a t = 'a * 'a list

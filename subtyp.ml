@@ -45,6 +45,13 @@ module Unit_float = struct
   let of_float t = if t < zero || t > one then invalid_arg "Unit_float.of_float" else t
 end
 
+module Unit_num = struct
+  type t = Num.num
+  let one = Num.Int 1
+  let zero = Num.Int 0
+  let of_num t = if Num.(lt_num t zero || gt_num t one) then invalid_arg "Unit_num.of_num" else t
+end
+
 
 module Non_empty_list = struct
   type 'a t = 'a * 'a list
