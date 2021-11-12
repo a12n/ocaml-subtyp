@@ -46,20 +46,18 @@ end
 
 module Open = struct
   type neg_int = Neg_int.t
+  type 'a non_empty_list = 'a Non_empty_list.t
   type non_neg_float = Non_neg_float.t
   type non_neg_int = Non_neg_int.t
   type pos_float = Pos_float.t
   type pos_int = Pos_int.t
   type unit_float = Unit_float.t
 
-  type 'a non_empty_list = 'a Non_empty_list.t
-
   let neg_int = Neg_int.of_int
+  let non_empty_list = Non_empty_list.of_list
   let non_neg_float = Non_neg_float.of_float
   let non_neg_int = Non_neg_int.of_int
   let pos_float = Pos_float.of_float
   let pos_int = Pos_int.of_int
   let unit_float = Unit_float.of_float
-
-  let non_empty_list = Non_empty_list.of_list
 end
