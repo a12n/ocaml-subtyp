@@ -1,37 +1,37 @@
 module Neg_int = struct
   type t = int
   let minus_one = -1
-  let of_int n = if n > minus_one then invalid_arg "Neg_int.of_int" else n
+  let of_int n = if n > minus_one then invalid_arg __FUNCTION__ else n
 end
 
 module Non_neg_float = struct
   type t = float
   let zero = 0.0
-  let of_float x = if x < zero then invalid_arg "Non_neg_float.of_float" else x
+  let of_float x = if x < zero then invalid_arg __FUNCTION__ else x
 end
 
 module Non_neg_int = struct
   type t = int
   let zero = 0
-  let of_int n = if n < zero then invalid_arg "Non_neg_int.of_int" else n
+  let of_int n = if n < zero then invalid_arg __FUNCTION__ else n
 end
 
 module Pos_int = struct
   type t = int
   let one = 1
-  let of_int n = if n < one then invalid_arg "Pos_int.of_int" else n
+  let of_int n = if n < one then invalid_arg __FUNCTION__ else n
 end
 
 module Pos_float = struct
   type t = float
-  let of_float x = if x <= 0.0 then invalid_arg "Pos_float.of_float" else x
+  let of_float x = if x <= 0.0 then invalid_arg __FUNCTION__ else x
 end
 
 module Unit_float = struct
   type t = float
   let one = 1.0
   let zero = 0.0
-  let of_float t = if t < zero || t > one then invalid_arg "Unit_float.of_float" else t
+  let of_float t = if t < zero || t > one then invalid_arg __FUNCTION__ else t
 end
 
 
