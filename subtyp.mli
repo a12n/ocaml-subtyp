@@ -1,6 +1,6 @@
 module Neg_int : sig
   type t = private int
-  val neg_one : t
+  val minus_one : t
   val of_int : int -> t
 end
 

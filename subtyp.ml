@@ -1,6 +1,6 @@
 module Neg_int = struct
   type t = int
-  let neg_one = -1
+  let minus_one = -1
   let of_int n = if n > neg_one then invalid_arg "Neg_int.of_int" else n
 end
 
