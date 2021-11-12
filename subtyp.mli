@@ -36,9 +36,8 @@ end
 
 
 module Non_empty_list : sig
-  type 'a t = 'a * 'a list
+  type 'a t = private 'a list
   val of_list : 'a list -> 'a t
-  val to_list : 'a t -> 'a list
 end
 
 
