@@ -2,7 +2,7 @@ module Integer = struct
   module Neg = struct
     type t = Z.t
 
-    let neg_one = Z.minus_one
+    let minus_one = Z.minus_one
 
     let of_integer z =
       if Z.(gt z minus_one) then invalid_arg __FUNCTION__ else z

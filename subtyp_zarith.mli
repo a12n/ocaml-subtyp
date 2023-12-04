@@ -2,7 +2,7 @@ module Integer : sig
   module Neg : sig
     type t = private Z.t
 
-    val neg_one : t
+    val minus_one : t
     val of_integer : Z.t -> t
   end
 
