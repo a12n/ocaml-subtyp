@@ -10,12 +10,14 @@ module Float : sig
     type t = private float
 
     val zero : t
+    val one : t
     val of_float : float -> t
   end
 
   module Pos : sig
     type t = private float
 
+    val one : t
     val of_float : float -> t
   end
 
@@ -40,6 +42,7 @@ module Int : sig
     type t = private int
 
     val zero : t
+    val one : t
     val of_int : int -> t
   end
 

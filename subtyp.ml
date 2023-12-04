@@ -10,12 +10,14 @@ module Float = struct
     type t = float
 
     let zero = 0.0
+    let one = 1.0
     let of_float x = if x < zero then invalid_arg __FUNCTION__ else x
   end
 
   module Pos = struct
     type t = float
 
+    let one = 1.0
     let of_float x = if x <= 0.0 then invalid_arg __FUNCTION__ else x
   end
 
@@ -40,6 +42,7 @@ module Int = struct
     type t = int
 
     let zero = 0
+    let one = 1
     let of_int n = if n < zero then invalid_arg __FUNCTION__ else n
   end
 
