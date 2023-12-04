@@ -1,2 +1,9 @@
 (library
- (name subtyp))
+ (public_name subtyp)
+ (modules subtyp))
+
+(library
+ (public_name subtyp_zarith)
+ (optional)
+ (modules subtyp_zarith)
+ (libraries zarith))
