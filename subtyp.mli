@@ -2,14 +2,15 @@ module Float : sig
   module Neg : sig
     type t = private float
 
+    val minus_one : t
     val of_float : float -> t
   end
 
   module Non_neg : sig
     type t = private float
 
-    val of_float : float -> t
     val zero : t
+    val of_float : float -> t
   end
 
   module Pos : sig
@@ -21,9 +22,9 @@ module Float : sig
   module Unit : sig
     type t = private float
 
-    val of_float : float -> t
-    val one : t
     val zero : t
+    val one : t
+    val of_float : float -> t
   end
 end
 
@@ -38,15 +39,15 @@ module Int : sig
   module Non_neg : sig
     type t = private int
 
-    val of_int : int -> t
     val zero : t
+    val of_int : int -> t
   end
 
   module Pos : sig
     type t = private int
 
-    val of_int : int -> t
     val one : t
+    val of_int : int -> t
   end
 end
 

@@ -2,6 +2,7 @@ module Float = struct
   module Neg = struct
     type t = float
 
+    let minus_one = -1.0
     let of_float x = if x >= 0.0 then invalid_arg __FUNCTION__ else x
   end
 
@@ -21,8 +22,8 @@ module Float = struct
   module Unit = struct
     type t = float
 
-    let one = 1.0
     let zero = 0.0
+    let one = 1.0
     let of_float t = if t < zero || t > one then invalid_arg __FUNCTION__ else t
   end
 end
