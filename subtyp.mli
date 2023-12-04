@@ -12,6 +12,12 @@ module Float : sig
     type t = private float
     val of_float : float -> t
   end
+  module Unit : sig
+    type t = private float
+    val of_float : float -> t
+    val one : t
+    val zero : t
+  end
 end
 
 module Neg_int : sig
@@ -32,14 +38,6 @@ module Pos_int : sig
   val one : t
 end
 
-module Unit_float : sig
-  type t = private float
-  val of_float : float -> t
-  val one : t
-  val zero : t
-end
-
-
 module Non_empty_list : sig
   type 'a t = private 'a list
   val of_list : 'a list -> 'a t
@@ -54,7 +52,7 @@ module Open : sig
   type non_neg_int = Non_neg_int.t
   type pos_float = Float.Pos.t
   type pos_int = Pos_int.t
-  type unit_float = Unit_float.t
+  type unit_float = Float.Unit.t
 
   val neg_float : float -> neg_float
   val neg_int : int -> neg_int
