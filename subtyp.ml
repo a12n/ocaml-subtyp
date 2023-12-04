@@ -40,10 +40,10 @@ end
 
 module List = struct
   module Non_empty = struct
-    type 'a t = 'a list
+    type 'a t = 'a * 'a list
     let of_list = function
-      | (_ :: _) as l -> l
-      | []            -> invalid_arg __FUNCTION__
+      | (x0 :: xs) -> x0, xs
+      | []         -> invalid_arg __FUNCTION__
   end
 end
 

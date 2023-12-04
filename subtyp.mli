@@ -40,7 +40,7 @@ end
 
 module List : sig
   module Non_empty : sig
-    type 'a t = private 'a list
+    type 'a t = 'a * 'a list
     val of_list : 'a list -> 'a t
   end
 end
