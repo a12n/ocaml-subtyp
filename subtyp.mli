@@ -54,6 +54,8 @@ module List : sig
   module Non_empty : sig
     type 'a t = 'a * 'a list
 
+    val length : 'a t -> int
+    val reduce : ('a -> 'a -> 'a) -> 'a t -> 'a
     val of_list : 'a list -> 'a t
     val to_list : 'a t -> 'a list
   end

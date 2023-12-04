@@ -54,6 +54,9 @@ module List = struct
   module Non_empty = struct
     type 'a t = 'a * 'a list
 
+    let length (_, xs) = 1 + Stdlib.List.length xs
+    let reduce f (x0, xs) = Stdlib.List.fold_left f x0 xs
+
     let of_list = function
       | x0 :: xs -> (x0, xs)
       | [] -> invalid_arg __FUNCTION__
