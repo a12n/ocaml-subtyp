@@ -9,7 +9,6 @@
 (package
  (name subtyp)
  (depends
-  (ocaml (>= 4.12))
-  (qtest :with-test)))
+  (ocaml (>= 4.12))))
 
 (generate_opam_files true)

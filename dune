@@ -1,5 +1,2 @@
 (library
- (public_name subtyp)
- (inline_tests
-  (executable (flags (-w -33)))
-  (backend qtest.lib)))
+ (name subtyp))
