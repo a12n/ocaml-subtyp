@@ -44,6 +44,7 @@ module List = struct
     let of_list = function
       | (x0 :: xs) -> x0, xs
       | []         -> invalid_arg __FUNCTION__
+    let to_list (x0, xs) = x0 :: xs
   end
 end
 
