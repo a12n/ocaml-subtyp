@@ -1,6 +1,6 @@
 (lang dune 2.9)
 
-(version 1.1.0)
+(version 2.0.0)
 (source (github a12n/ocaml-subtyp))
 (license MIT)
 (authors "Anton Yabchinskiy")
