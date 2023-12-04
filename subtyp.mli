@@ -38,16 +38,17 @@ module Int : sig
   end
 end
 
-module Non_empty_list : sig
-  type 'a t = private 'a list
-  val of_list : 'a list -> 'a t
+module List : sig
+  module Non_empty : sig
+    type 'a t = private 'a list
+    val of_list : 'a list -> 'a t
+  end
 end
-
 
 module Open : sig
   type neg_float = Float.Neg.t
   type neg_int = Int.Neg.t
-  type 'a non_empty_list = 'a Non_empty_list.t
+  type 'a non_empty_list = 'a List.Non_empty.t
   type non_neg_float = Float.Non_neg.t
   type non_neg_int = Int.Non_neg.t
   type pos_float = Float.Pos.t

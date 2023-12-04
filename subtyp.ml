@@ -38,17 +38,19 @@ module Int = struct
   end
 end
 
-module Non_empty_list = struct
-  type 'a t = 'a list
-  let of_list = function
-    | (_ :: _) as l -> l
-    | []            -> invalid_arg __FUNCTION__
+module List = struct
+  module Non_empty = struct
+    type 'a t = 'a list
+    let of_list = function
+      | (_ :: _) as l -> l
+      | []            -> invalid_arg __FUNCTION__
+  end
 end
 
 module Open = struct
   type neg_float = Float.Neg.t
   type neg_int = Int.Neg.t
-  type 'a non_empty_list = 'a Non_empty_list.t
+  type 'a non_empty_list = 'a List.Non_empty.t
   type non_neg_float = Float.Non_neg.t
   type non_neg_int = Int.Non_neg.t
   type pos_float = Float.Pos.t
@@ -57,7 +59,7 @@ module Open = struct
 
   let neg_float = Float.Neg.of_float
   let neg_int = Int.Neg.of_int
-  let non_empty_list = Non_empty_list.of_list
+  let non_empty_list = List.Non_empty.of_list
   let non_neg_float = Float.Non_neg.of_float
   let non_neg_int = Int.Non_neg.of_int
   let pos_float = Float.Pos.of_float
