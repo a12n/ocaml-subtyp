@@ -1,6 +1,8 @@
-module Neg_float : sig
-  type t = private float
-  val of_float : float -> t
+module Float : sig
+  module Neg : sig
+    type t = private float
+    val of_float : float -> t
+  end
 end
 
 module Neg_int : sig
@@ -47,7 +49,7 @@ end
 
 
 module Open : sig
-  type neg_float = Neg_float.t
+  type neg_float = Float.Neg.t
   type neg_int = Neg_int.t
   type 'a non_empty_list = 'a Non_empty_list.t
   type non_neg_float = Non_neg_float.t

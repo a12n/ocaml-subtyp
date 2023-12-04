@@ -1,6 +1,8 @@
-module Neg_float = struct
-  type t = float
-  let of_float x = if x >= 0.0 then invalid_arg __FUNCTION__ else x
+module Float = struct
+  module Neg = struct
+    type t = float
+    let of_float x = if x >= 0.0 then invalid_arg __FUNCTION__ else x
+  end
 end
 
 module Neg_int = struct
@@ -49,7 +51,7 @@ end
 
 
 module Open = struct
-  type neg_float = Neg_float.t
+  type neg_float = Float.Neg.t
   type neg_int = Neg_int.t
   type 'a non_empty_list = 'a Non_empty_list.t
   type non_neg_float = Non_neg_float.t
@@ -58,7 +60,7 @@ module Open = struct
   type pos_int = Pos_int.t
   type unit_float = Unit_float.t
 
-  let neg_float = Neg_float.of_float
+  let neg_float = Float.Neg.of_float
   let neg_int = Neg_int.of_int
   let non_empty_list = Non_empty_list.of_list
   let non_neg_float = Non_neg_float.of_float
